@@ -908,18 +908,22 @@ header .tagline {
 /* Responsive Design - Ajuste pour les petits écrans */
 @media (max-width: 768px) {
     .experience-item {
-        flex-direction: column; /* Image au-dessus sur petit écran */
+        flex-direction: column; /* Met tout en colonne */
         text-align: center; /* Centre le texte */
+        align-items: center; /* Centre les éléments (image et date) */
         padding: 20px 10px; /* Réduit le padding */
     }
 
     .experience-date {
         position: static; /* Remet la date en flux normal */
         margin-bottom: 10px; /* Espacement avec le contenu */
+        font-size: 1rem; /* Ajuste la taille de la police */
+        text-align: center; /* Centre la date */
     }
 
     .experience-content {
         padding-left: 0; /* Supprime l'espace inutilisé à gauche */
+        text-align: center; /* Centre le texte */
     }
 
     .experience-item img {
@@ -936,17 +940,24 @@ header .tagline {
     }
 
     .experience-date {
-        font-size: 1rem; /* Réduit la taille de la police */
+        font-size: 0.9rem; /* Réduit légèrement la taille de la police */
+        margin-bottom: 5px; /* Réduit l'espace sous la date */
     }
 
     .experience-content h3 {
-        font-size: 1.4rem; /* Réduit légèrement la taille du titre */
+        font-size: 1.2rem; /* Réduit légèrement la taille du titre */
     }
 
     .experience-content p {
-        font-size: 0.9rem; /* Réduit légèrement la taille du texte */
+        font-size: 0.8rem; /* Réduit légèrement la taille du texte */
+    }
+
+    .experience-item img {
+        width: 100px; /* Taille encore plus petite pour les très petits écrans */
+        height: 100px; /* Taille encore plus petite pour les très petits écrans */
     }
 }
+
 
 
 
