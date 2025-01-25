@@ -501,15 +501,18 @@ header .tagline {
 .logos-container {
     display: grid; /* Utilisation de la grille pour une répartition optimale */
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Colonnes dynamiques */
-    gap: 20px; /* Espacement entre les logos */
-    justify-items: center; /* Centre horizontalement chaque élément */
-    align-items: center; /* Centre verticalement chaque élément */
+    gap: 30px; /* Espacement uniforme entre les éléments */
+    justify-items: center; /* Centre chaque élément horizontalement */
+    align-items: center; /* Centre chaque élément verticalement */
     padding: 20px; /* Espacement interne autour des logos */
 }
 
 /* Style de chaque logo */
 .logo-item {
     text-align: center; /* Centre le texte sous chaque logo */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Aligne les éléments au centre */
 }
 
 /* Image du logo */
@@ -533,21 +536,29 @@ header .tagline {
     margin: 10px 0 0; /* Espacement au-dessus du texte */
 }
 
-/* RESPONSIVE DESIGN */
-
-/* Petits écrans (<480px) */
-@media (max-width: 480px) {
-    .logos-container {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Colonnes plus compactes */
-        gap: 10px; /* Réduction de l'espacement */
+/* Responsive Design pour les petits écrans */
+@media (max-width: 768px) {
+    /* Centre le titre */
+    .logos-title {
+        text-align: center; /* Centre le titre uniquement sur petits écrans */
+        font-size: 1.2rem; /* Taille ajustée */
+        margin-bottom: 20px; /* Espacement sous le titre */
     }
 
+    /* Conteneur des logos en grille */
+    .logos-container {
+        grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
+        gap: 30px 50px; /* Plus d'espacement : 30px vertical, 50px horizontal */
+    }
+
+    /* Style des éléments individuels */
     .logo-item img {
-        max-width: 100px; /* Réduction de la taille maximale des logos */
+        max-width: 80px; /* Taille réduite pour les petits écrans */
+        height: auto; /* Conserve les proportions */
     }
 
     .logo-item p {
-        font-size: 0.8rem; /* Réduction de la taille du texte */
+        font-size: 0.9rem; /* Taille réduite du texte */
     }
 }
 
