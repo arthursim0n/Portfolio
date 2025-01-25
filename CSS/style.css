@@ -97,6 +97,7 @@ header .separator {
     border-radius: 5px;
 }
 
+
 /* Barre de navigation */
 nav {
     background-color: #6AB08D; /* Couleur verte claire */
@@ -107,19 +108,17 @@ nav {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre subtile */
     height: 70px; /* Hauteur fixe */
     display: flex;
-    justify-content: center; /* Centre les liens horizontalement */
-    align-items: center; /* Centre les liens verticalement */
-    padding: 10px 20px; /* Espacement interne */
+    justify-content: space-between; /* Logo à gauche, menu ou hamburger à droite */
+    align-items: center; /* Centre verticalement les éléments */
+    padding: 0 20px;
 }
 
 /* Conteneur pour aligner le logo et les liens */
 .nav-container {
     display: flex;
-    justify-content: space-between; /* Logo à gauche, liens à droite */
-    align-items: center; /* Centre verticalement tous les éléments */
+    justify-content: space-between; /* Logo à gauche, menu ou hamburger à droite */
+    align-items: center;
     width: 100%; /* Étire le conteneur sur toute la largeur */
-    height: 100%; /* Alignement vertical */
-    padding: 0 20px; /* Espacement horizontal */
 }
 
 /* Logo */
@@ -128,31 +127,96 @@ nav {
     width: auto; /* Conserve les proportions */
 }
 
+/* Bouton menu hamburger */
+.open-menu {
+    display: none; /* Caché sur grands écrans */
+    font-size: 2rem;
+    color: #FAF5E9;
+    cursor: pointer;
+    z-index: 1100;
+}
+
 /* Liens de navigation */
 .nav-links {
-    display: flex; /* Alignement horizontal */
+    display: flex; /* Alignement horizontal par défaut */
     justify-content: center; /* Centre les liens horizontalement */
-    align-items: center; /* Centre les liens verticalement */
-    list-style: none; /* Pas de puces */
-    gap: 15px; /* Espacement entre les liens */
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+    transition: transform 0.3s ease;
 }
 
 /* Liens individuels */
 .nav-links li a {
-    font-family: 'Lato', sans-serif; /* Police moderne */
-    text-decoration: none; /* Supprime le soulignement */
-    color: #FAF5E9; /* Couleur ivoire */
-    font-weight: 600; /* Texte semi-gras */
-    font-size: clamp(0.6rem, 2vw, 1.2rem); /* Taille de la police responsive */
-    white-space: nowrap; /* Empêche les mots d'être coupés */
-    transition: color 0.3s ease; /* Animation douce au survol */
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    color: #FAF5E9;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+    transition: color 0.3s ease;
 }
 
-/* Effet survol */
 .nav-links li a:hover {
-    color: #FFD94A; /* Jaune doux au survol */
+    color: #FFD94A;
 }
 
+/* Masquer les liens sur petits écrans */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Masquer les liens sur mobile */
+        flex-direction: column; /* Les afficher verticalement lorsqu'ils sont visibles */
+        position: absolute;
+        top: 70px; /* Juste en dessous de la barre de navigation */
+        left: 0;
+        width: 100%;
+        background-color: #6AB08D;
+        padding: 20px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Afficher le bouton menu hamburger */
+    .open-menu {
+        display: block; /* Afficher sur petits écrans */
+    }
+
+    /* Afficher les liens et la croix quand le menu est activé */
+    input[type="checkbox"]:checked ~ .nav-links {
+        display: flex;
+    }
+
+    input[type="checkbox"]:checked ~ .close-menu {
+        display: block; /* Affiche la croix quand le menu est ouvert */
+    }
+}
+
+/* Bouton croix (fermeture du menu) */
+.close-menu {
+    display: none; /* Caché par défaut */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: #FAF5E9;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+/* Supprimer la checkbox de l'affichage */
+input[type="checkbox"] {
+    display: none; /* Masque complètement la checkbox */
+}
+
+/* Animation du menu (facultative) */
+@media (max-width: 768px) {
+    .nav-links {
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+    }
+    input[type="checkbox"]:checked ~ .nav-links {
+        transform: translateY(0);
+    }
+}
 
 
 /* Sections */
