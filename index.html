@@ -6,51 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio personnel avec animations modernes mettant en avant mes compétences et projets.">
     <link rel="stylesheet" href="CSS/style.css"> <!-- Lien vers le fichier CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
 </head>
 <body>
     <div id="conteneur-principal">
         <!-- En-tête avec animation -->
         <header class="header-anim">
-               <div class="header-content">
-            <h1>Arthur Simon</h1>
-			<div class="separator"></div> <!-- Barre séparatrice plus longue -->
-			<h2 class="sub-title">Étudiant en Sciences des Données</h2>
-			<p class="tagline">"Un chiffre ne vaut rien sans son histoire. Contactez-moi pour raconter celle de vos données."</p>
-			<p class="welcome-text">Bienvenue sur mon ePortfolio !</p>
-			<p>
-				<a href="https://www.linkedin.com/in/arthur-simon-333176282/" target="_blank">LinkedIn</a> | 
-				<a href="CV_ARTHUR_SIMON_PORTFOLIO.pdf" target="_blank">Téléchargez mon CV</a>
-			</p>
-		</header>
+            <div class="header-content">
+                <h1>Arthur Simon</h1>
+                <div class="separator"></div> <!-- Barre séparatrice plus longue -->
+                <h2 class="sub-title">Étudiant en Sciences des Données</h2>
+                <p class="tagline">"Un chiffre ne vaut rien sans son histoire. Contactez-moi pour raconter celle de vos données."</p>
+                <p class="welcome-text">Bienvenue sur mon ePortfolio !</p>
+                <p>
+                    <a href="https://www.linkedin.com/in/arthur-simon-333176282/" target="_blank">LinkedIn</a> | 
+                    <a href="CV_ARTHUR_SIMON_PORTFOLIO.pdf" target="_blank">Téléchargez mon CV</a>
+                </p>
+            </div>
+        </header>
 
         <!-- Navigation animée -->
-		<nav>
-			<div class="nav-container">
-				<!-- Logo (à gauche) -->
-				<div class="logo-container">
-					<a href="#conteneur-principal">
-						<img src="Images/Logo.png" alt="Logo Arthur Simon">
-					</a>
-				</div>
-				<!-- Liens de navigation (centrés) -->
-				<ul class="nav-links">
-					<li><a href="#about">Me connaître</a></li>
-					<li><a href="#formations">Formations</a></li>
-					<li><a href="#experiences">Expériences</a></li>
-					<li><a href="#skills">Compétences</a></li>
-					<li><a href="#projects">Projets</a></li>
-					<li><a href="#passions">Passions</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul>
+        <nav>
+            <div class="nav-container">
+                <!-- Logo (à gauche) -->
+                <div class="logo-container">
+                    <a href="#conteneur-principal">
+                        <img src="Images/Logo.png" alt="Logo Arthur Simon">
+                    </a>
+                </div>
+                <!-- Menu Hamburger -->
+                <input type="checkbox" id="check" />
+                <ul class="nav-links">
+                    <li><a href="#about">Me connaître</a></li>
+                    <li><a href="#formations">Formations</a></li>
+                    <li><a href="#experiences">Expériences</a></li>
+                    <li><a href="#skills">Compétences</a></li>
+                    <li><a href="#projects">Projets</a></li>
+                    <li><a href="#passions">Passions</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+                </ul>
+                <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+            </div>
+        </nav>
 
-				<!-- Icône de traduction (à droite) -->
-				<div class="translate-icon">
-					<button id="translate-btn">
-						<img src="Images/TRAD1.png" alt="Icône Traduction" class="translate-img">
-					</button>
-				</div>
-			</div>
-		</nav>
 
 
         <!-- Section Présentation -->
