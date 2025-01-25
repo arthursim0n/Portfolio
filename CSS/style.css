@@ -323,6 +323,26 @@ header p a:hover {
     padding: 0 10px 10px;
 }
 
+/* Responsive Design - Petits écrans */
+@media (max-width: 768px) {
+    .project-card h3 {
+        font-size: 1rem; /* Réduction de la taille de la police pour petits écrans */
+        line-height: 1.2; /* Réduction de l'interligne pour éviter les débordements */
+        word-wrap: break-word; /* Permet le retour à la ligne automatique */
+    }
+
+    .project-card {
+        padding: 10px; /* Réduction du padding pour gagner de l'espace */
+    }
+}
+
+/* Responsive Design - Très petits écrans */
+@media (max-width: 480px) {
+    .project-card h3 {
+        font-size: 0.9rem; /* Réduction supplémentaire pour très petits écrans */
+    }
+}
+
 /* Footer */
 footer {
     background-color: #6AB08D; /* Légère nuance de vert */
