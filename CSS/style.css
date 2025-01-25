@@ -237,6 +237,7 @@ section h2 {
 }
 
 section p {
+    text-align: justify;
     font-family: 'Lato', sans-serif; /* Police moderne pour les paragraphes */
     font-size: 1rem;
     max-width: 800px;
