@@ -671,6 +671,32 @@ header .tagline {
     }
 }
 
+/* Effet survol pour chaque bloc de passion */
+.passion:hover {
+    transform: translateY(-5px); /* Légère élévation */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Accentue l'ombre */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition fluide */
+}
+
+/* Effet survol pour les images des passions */
+.passion-image:hover {
+    transform: scale(1.05); /* Zoom léger */
+    transition: transform 0.3s ease; /* Transition fluide */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Ombre plus marquée */
+}
+
+/* Effet survol pour le titre */
+.passion-content h3:hover {
+    color: #E5C137; /* Couleur jaune pour le titre au survol */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Effet de texte en surbrillance */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Transition fluide */
+}
+
+/* Effet survol pour le texte */
+.passion-content p:hover {
+    color: #444; /* Légère variation de couleur pour le texte */
+}
+
 /* Responsive pour téléphones */
 @media (max-width: 480px) {
     .passion {
