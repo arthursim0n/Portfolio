@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
         section.style.transform = 'translateY(50px)';
         observer.observe(section);
     });
-});
+
 
 
     const skillsSection = document.getElementById("skills");
