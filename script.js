@@ -77,3 +77,13 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(section);
     });
 });
+
+
+    const skillsSection = document.getElementById("skills");
+    if (skillsSection) {
+        skillsSection.style.display = "none"; // Cache temporairement
+        setTimeout(() => {
+            skillsSection.style.display = "block"; // Réaffiche pour forcer le rendu
+        }, 50); // 50ms pour laisser le DOM se stabiliser
+    }
+});
