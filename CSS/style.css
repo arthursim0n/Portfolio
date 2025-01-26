@@ -343,25 +343,6 @@ header p a:hover {
     }
 }
 
-/* Footer */
-footer {
-    background-color: #6AB08D; /* Légère nuance de vert */
-    text-align: center;
-    padding: 20px;
-    color: #FAF5E9; /* Ivoire */
-}
-
-footer a {
-    color: #FFD94A; /* Jaune doux */
-    text-decoration: none;
-    font-weight: bold;
-}
-
-footer a:hover {
-    color: #FFF59D; /* Couleur plus claire au survol */
-}
-
-
 
 /* Header styles */
 header .tagline {
@@ -435,6 +416,11 @@ header .tagline {
     word-wrap: break-word; /* Évite que les mots très longs ne débordent */
 }
 
+/* Effet au survol pour le contenu */
+.about-item:hover {
+    transform: translateY(-5px); /* Soulèvement */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombre accentuée */
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -1097,6 +1083,15 @@ header .tagline {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombre accentuée */
 }
 
+.timeline-item:hover {
+    transform: translateY(-5px); /* Soulèvement */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre renforcée */
+}
+
+.timeline-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
 /* Responsive Design - Ajuste pour les petits écrans */
 @media (max-width: 768px) {
     .timeline-item {
@@ -1140,10 +1135,6 @@ header .tagline {
         font-size: 0.9rem; /* Réduit légèrement la taille du texte */
     }
 }
-
-
-
-
 
 
 /* Transition harmonieuse entre sections */
