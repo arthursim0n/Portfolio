@@ -1135,37 +1135,111 @@ header {
 
 /* Section Contactez-moi */
 
-#contact {
-    width: 100%; /* Prend toute la largeur de l'écran */
-    background-color: #52A77E; /* Vert doux */
-    color: #FAF5E9; /* Ivoire */
+.footer-anim {
+    background-color: #6AB08D; /* Vert clair harmonisé */
+    color: #FAF5E9; /* Texte ivoire */
+    padding: 40px 20px;
     text-align: center;
-    padding: 50px 20px; /* Ajoute de l'espacement */
-    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1); /* Optionnel : ombre subtile */
+    border-top: 3px solid #52A77E; /* Légère bordure pour démarquer */
 }
 
-
-#contact h2 {
-    font-family: 'Playfair Display', serif; /* Police élégante */
-    font-size: 3rem; /* Taille plus grande pour le mettre en avant */
-    color: #FAF5E9; /* Couleur ivoire */
-    text-align: center;
-    margin-bottom: 40px;
-    position: relative; /* Nécessaire pour l'effet autour */
+/* Titre avec animation */
+.footer-anim h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     animation: subtle-glow 3s infinite; /* Animation subtile */
 }
 
 /* Animation subtile de glow professionnel */
 @keyframes subtle-glow {
     0%, 100% {
-        text-shadow: 0 0 5px rgba(255, 255, 255, 0.6), 
-                     0 0 10px rgba(173, 216, 230, 0.5), 
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.6),
+                     0 0 10px rgba(173, 216, 230, 0.5),
                      0 0 15px rgba(135, 206, 235, 0.4);
     }
     50% {
-        text-shadow: 0 0 10px rgba(255, 255, 255, 0.9), 
-                     0 0 20px rgba(173, 216, 230, 0.7), 
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.9),
+                     0 0 20px rgba(173, 216, 230, 0.7),
                      0 0 30px rgba(135, 206, 235, 0.5);
+    }
+}
+
+/* Formulaire */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 600px; /* Limite pour un bon affichage */
+    margin: 0 auto 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    resize: none;
+}
+
+.contact-form button {
+    background-color: #FFD94A; /* Jaune doux */
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+    background-color: #E5C137; /* Jaune plus foncé */
+    transform: scale(1.05); /* Effet d'agrandissement subtil */
+}
+
+/* Informations de contact */
+.contact-info {
+    margin-top: 20px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.contact-info a {
+    color: #FFD94A;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #E5C137; /* Jaune légèrement plus foncé */
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .contact-form {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .footer-anim h2 {
+        font-size: 1.5rem; /* Réduit la taille du titre */
+    }
+
+    .contact-info {
+        font-size: 0.9rem; /* Ajuste la taille du texte */
     }
 }
 
