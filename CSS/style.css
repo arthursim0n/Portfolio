@@ -500,6 +500,7 @@ header .tagline {
     display: flex;
     flex-direction: column;
     align-items: center; /* Aligne les éléments au centre */
+    justify-content: center; /* Assure un centrage vertical */
 }
 
 /* Image du logo */
@@ -518,10 +519,14 @@ header .tagline {
 
 /* Texte sous les logos */
 .logo-item p {
-    font-size: 1rem;
+    font-size: 1rem; /* Taille du texte */
     color: #333; /* Couleur du texte */
     margin: 10px 0 0; /* Espacement au-dessus du texte */
+    text-align: center; /* Centre le texte */
+    width: 100%; /* Assure que le texte est bien aligné sous le logo */
+    word-wrap: break-word; /* Permet de gérer les mots longs si nécessaire */
 }
+
 
 /* Responsive Design pour les petits écrans */
 @media (max-width: 768px) {
