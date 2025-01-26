@@ -436,22 +436,6 @@ header .tagline {
 }
 
 
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .about-container {
-        flex-direction: column; /* Empile l'image et le texte */
-        align-items: center;
-    }
-
-    .id-photo {
-        max-width: 100%; /* L'image prend toute la largeur */
-        margin-bottom: 20px; /* Espacement sous l'image */
-    }   
-}
-
-
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .about-container {
