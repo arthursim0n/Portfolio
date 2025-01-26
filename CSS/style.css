@@ -370,76 +370,96 @@ header .tagline {
 
 /* Photo dans la section "Me connaître" */
 
-
 /* Conteneur Flex pour l'image et le texte */
 .about-container {
     display: flex;
-    align-items: flex-start; /* Aligne le texte et l'image en haut */
-    justify-content: flex-start; /* Aligne les éléments à gauche */
-    gap: 30px; /* Espacement entre l'image et le texte */
+    flex-wrap: wrap; /* Permet de s'adapter aux différentes tailles d'écran */
+    align-items: flex-start;
+    justify-content: space-evenly; /* Répartition équilibrée des blocs */
+    gap: 20px; /* Espacement entre les éléments */
     margin: 20px 0;
 }
 
 /* Image */
 .id-photo {
-    max-width: 250px; /* Largeur maximale de l'image */
-    height: auto; /* Maintient les proportions */
-    border-radius: 10px; /* Coins arrondis */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute une ombre subtile */
-    flex-shrink: 0; /* Empêche l'image de rétrécir */
+    max-width: 220px; /* Ajuste la largeur pour mieux s'intégrer */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Effet de survol */
 }
 
+.id-photo:hover {
+    transform: scale(1.05); /* Zoom léger au survol */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Accentue l'ombre */
+}
+
+/* Blocs individuels */
 .about-item {
-    background-color: #FAF5E9; /* Fond ivoire */
-    padding: 20px 30px; /* Espacement interne */
-    border-radius: 10px; /* Coins arrondis */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    background-color: #FAF5E9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    flex: 1 1 300px; /* Largeur flexible avec minimum de 300px */
+    max-width: 400px; /* Largeur maximale */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Effet de survol */
+}
+
+/* Effet de survol pour les blocs */
+.about-item:hover {
+    transform: translateY(-5px); /* Légère élévation au survol */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombre accentuée */
 }
 
 /* Sous-titres */
 .about-item h3 {
-    margin-bottom: 15px; /* Espacement sous le sous-titre */
-    font-size: 1.4rem; /* Taille légèrement augmentée */
-    color: #52A77E; /* Vert doux */
-    text-align: center; /* Centrage des sous-titres */
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    color: #52A77E;
+    text-align: center;
     font-weight: bold;
 }
 
 /* Texte des paragraphes */
 .about-item p {
-    margin: 0 auto; /* Centre le texte dans son conteneur */
-    line-height: 1.8; /* Espacement entre les lignes */
-    text-align: justify; /* Justifie le texte pour qu'il occupe toute la largeur */
-    color: #333; /* Couleur du texte */
-    max-width: 100%; /* S'assure que le texte occupe toute la largeur disponible */
-    padding: 0 30px; /* Ajoute un padding interne pour éviter que le texte touche les bords */
-    word-wrap: break-word; /* Évite que les mots très longs ne débordent */
+    margin: 0;
+    line-height: 1.8;
+    text-align: justify;
+    color: #333;
 }
 
-/* Effet au survol pour le contenu */
-.about-item:hover {
-    transform: translateY(-5px); /* Soulèvement */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombre accentuée */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
+/* Responsive pour tablettes */
+@media (max-width: 1024px) {
     .about-container {
-        flex-direction: column; /* Empile l'image et le texte */
-        align-items: center; /* Centre les éléments horizontalement */
+        gap: 15px;
     }
 
     .id-photo {
-        max-width: 100%; /* L'image s'adapte à la largeur de l'écran */
-        margin-bottom: 20px; /* Espacement sous l'image */
+        max-width: 180px; /* Réduction de la taille de l'image */
     }
 
-    .about-item h3 {
-        text-align: center; /* Maintient les sous-titres centrés sur mobile */
+    .about-item {
+        flex: 1 1 calc(50% - 20px); /* Deux blocs côte à côte */
+        max-width: calc(50% - 20px);
+    }
+}
+
+/* Responsive pour mobiles */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Empile les éléments verticalement */
+        align-items: center;
+        gap: 20px;
     }
 
-    .about-item p {
-        text-align: left; /* Garde le texte aligné à gauche */
+    .about-item {
+        flex: 1 1 100%; /* Blocs prennent toute la largeur */
+        max-width: 100%;
+    }
+
+    .id-photo {
+        margin-bottom: 20px;
     }
 }
 
