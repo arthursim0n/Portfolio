@@ -77,13 +77,16 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(section);
     });
 
+	// HAMBURGER 
+	
+	const navLinks = document.querySelectorAll(".nav-links a"); // Sélectionne tous les liens
+    const checkBox = document.getElementById("check"); // Sélectionne la checkbox du menu
 
-
-    const skillsSection = document.getElementById("skills");
-    if (skillsSection) {
-        skillsSection.style.display = "none"; // Cache temporairement
-        setTimeout(() => {
-            skillsSection.style.display = "block"; // Réaffiche pour forcer le rendu
-        }, 50); // 50ms pour laisser le DOM se stabiliser
-    }
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            if (checkBox.checked) {
+                checkBox.checked = false; // Décoche la checkbox pour fermer le menu
+            }
+        });
+    });
 });
