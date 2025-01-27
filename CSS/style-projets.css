@@ -1,0 +1,225 @@
+/* Général */
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FAF5E9;
+}
+
+/* Header */
+header {
+    background-color: #6AB08D;
+    color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.project-dates {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-align: right;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .project-dates {
+        position: static;
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+/* Section principale */
+.project-main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Ligne contenant deux colonnes */
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Ajout pour permettre aux colonnes de s'empiler */
+}
+
+.column {
+    flex: 1;
+    max-width: 48%; /* Limite à 48% pour deux colonnes */
+    box-sizing: border-box; /* Assure le respect des marges/paddings */
+}
+
+@media (max-width: 768px) {
+    .column {
+        max-width: 100%; /* Passe en pleine largeur sur petits écrans */
+    }
+}
+
+/* Blocs */
+.project-block {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+}
+
+.project-block h2 {
+    color: #52A77E;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.project-block ul,
+.project-block ol {
+    padding-left: 20px;
+    line-height: 1.8;
+}
+
+/* Images et outils */
+.tools img {
+    width: 100px;
+    margin: 10px;
+}
+
+@media (max-width: 768px) {
+    .tools img {
+        width: 80px; /* Réduit la taille des images sur petits écrans */
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #6AB08D;
+    color: #FFFFFF;
+}
+
+.tools {
+    display: flex; /* Aligne les éléments en ligne */
+    flex-wrap: wrap; /* Permet de passer à la ligne si nécessaire */
+    justify-content: space-around; /* Répartit l'espace équitablement */
+    align-items: center; /* Centre les images verticalement */
+    gap: 20px; /* Espacement entre les éléments */
+    padding: 10px 0; /* Espacement en haut et en bas */
+}
+
+.tools img {
+    width: calc(50% - 20px); /* Deux images par ligne avec un espace */
+    max-width: 150px; /* Limite maximale de taille */
+    height: auto; /* Conserve les proportions */
+    object-fit: contain; /* Ajuste sans rogner */
+    border-radius: 5px; /* Coins arrondis */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation au survol */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+}
+
+.tools img:hover {
+    transform: scale(1.05); /* Zoom au survol */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre accentuée au survol */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tools img {
+        width: calc(50% - 10px); /* Taille ajustée pour tablettes */
+    }
+}
+
+@media (max-width: 480px) {
+    .tools img {
+        width: 100%; /* Passe en pleine largeur sur téléphone */
+        max-width: none; /* Supprime la limite maximale */
+    }
+}
+
+
+/* Global styles for dark mode support */
+body.dark-mode {
+    background-color: #252b26; /* Fond sombre */
+    color: #FAF5E9; /* Texte clair */
+}
+
+/* Harmonisation du header pour le mode sombre */
+body.dark-mode header {
+    background-color: #2b3a32; /* Vert foncé */
+}
+
+body.dark-mode .project-block {
+    background-color: #2b3a32;
+    color: #FAF5E9; /* Texte clair */
+}
+
+body.dark-mode .project-block h2 {
+    color: #98c379; /* Vert clair pour les titres */
+}
+
+/* Style pour le slider */
+.slider {
+    position: relative;
+    max-width: 800px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.slides a {
+    flex: 0 0 100%; /* Chaque slide prend 100% de la largeur */
+}
+
+.slides img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Boutons de navigation */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.arrow:hover {
+    opacity: 1;
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}
+
+/* Adaptation aux petits écrans */
+@media (max-width: 768px) {
+    .arrow {
+        font-size: 1.5rem;
+        padding: 8px 12px;
+    }
+}
+
+
