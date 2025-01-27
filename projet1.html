@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquête sur l'IA</title>
+    <link rel="stylesheet" href="CSS/style-projets.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Enquête sur l'IA et redressement</h1>
+            <div class="project-dates">
+                <p><strong>Date de début :</strong> 20/10/2023</p>
+                <p><strong>Date de fin :</strong> 22/01/2025</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="project-main">
+        <!-- Premier conteneur : Contexte et Étapes -->
+        <div class="row">
+            <!-- Contexte & Objectifs -->
+            <div class="column">
+                <div class="project-block">
+                    <h2>Contexte & Objectifs</h2>
+                    <p>Le projet visait, en groupe de 4, à explorer l’utilisation de l’intelligence artificielle (IA) dans un cadre académique, en mettant un accent particulier sur les étudiants et enseignants de l’IUT.</p>
+                    <p><strong>Objectifs principaux :</strong></p>
+                    <ul>
+                        <li>Mesurer les représentations et pratiques actuelles concernant l’usage de l’IA dans l’apprentissage et l’évaluation.</li>
+                        <li>Identifier les besoins de la communauté en termes de formation et d’accompagnement pour intégrer ces technologies dans les pratiques pédagogiques.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Étapes du Projet -->
+            <div class="column">
+                <div class="project-block">
+                    <h2>Étapes du Projet</h2>
+                    <ol>
+                        <li><strong>Construction de l’enquête :</strong> Rédaction d’un questionnaire précis sur LimeSurvey.</li>
+                        <li><strong>Collecte des données :</strong> Diffusion auprès des étudiants et enseignants (859 réponses).</li>
+						<li><strong>Redressement sur deux variables (statut et filière) :</strong> Création d'une table de marges puis utilisation de la macro calmar sur SAS pour obtenir le poids de chaque individu</li>
+						<li><strong>Nettoyage de la base de données :</strong> Filtres et suppressions des non répondants, 629 réponses exploitables</li>
+                        <li><strong>Analyse des données :</strong> Analyse univariée et bivariée, visualisations via Excel</li>
+                        <li><strong>Restitution des résultats :</strong> Création d'une présentation visuelle puis présentation orale de 20 minutes</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- Deuxième conteneur : Résultats et Visuels -->
+		<div class="row">
+			<!-- Résultats & Compétences Acquises -->
+			<div class="column">
+				<div class="project-block">
+					<h2>Résultats & Compétences Acquises</h2>
+					<p>Les enseignants et étudiants diffèrent significativement sur leurs attentes et craintes vis-à-vis de l’IA :</p>
+					<ul>
+						<li><strong>Attentes dominantes :</strong> Support pédagogique et personnalisation de l’apprentissage.</li>
+						<li><strong>Principales craintes :</strong> Fiabilité des résultats, sécurité des données, et impact sur l’évaluation.</li>
+					</ul>
+					<p><strong>Compétences acquises :</strong> Conception et gestion d’une enquête, maîtrise des techniques de redressement, analyse critique des données, maîtrise des outils de visualisation.</p>
+				</div>
+			</div>
+
+			<!-- Visuels du Projet -->
+			<div class="column">
+				<div class="project-block">
+					<h2>Visuels du Projet</h2>
+					<div class="slider">
+						<div class="slides">
+							<a href="Images/IA5.png" target="_blank">
+								<img src="Images/IA5.png" alt="Visuel 1">
+							</a>
+							<a href="Images/IA6.png" target="_blank">
+								<img src="Images/IA6.png" alt="Visuel 2">
+							</a>
+							<a href="Images/IA2.png" target="_blank">
+								<img src="Images/IA2.png" alt="Visuel 3">
+							</a>
+							<a href="Images/IA3.png" target="_blank">
+								<img src="Images/IA3.png" alt="Visuel 4">
+							</a>
+							<a href="Images/IA4.png" target="_blank">
+								<img src="Images/IA4.png" alt="Visuel 5">
+							</a>
+							<a href="Images/IA7.png" target="_blank">
+								<img src="Images/IA7.png" alt="Visuel 6">
+							</a>
+						</div>
+						<button class="arrow left" onclick="prevSlide()">&#10094;</button>
+						<button class="arrow right" onclick="nextSlide()">&#10095;</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+        <!-- Troisième conteneur : Recueil Méthodologique et Outils -->
+        <div class="row">
+            <!-- Recueil Méthodologique -->
+            <div class="column">
+                <div class="project-block">
+                    <h2>Recueil Méthodologique</h2>
+                    <p><strong>Forces :</strong></p>
+                    <ul>
+                        <li>Représentativité améliorée grâce à une redressement sur deux variables : pertinence des résultats </li>
+                        <li>Analyses quantitatives fiables et bien structurées.</li>
+                    </ul>
+                    <p><strong>Limites :</strong></p>
+                    <ul>
+                        <li>Potentiel biais lié à la formulation des questions.</li>
+                        <li>Difficulté à généraliser les résultats à d’autres institutions que celle de l'IUT Paris - Rives de Seine</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Outils & Langages Utilisés -->
+            <div class="column">
+                <div class="project-block">
+                    <h2>Outils & Langages Utilisés</h2>
+                    <div class="tools">
+                        <img src="Images/EXCEL.png" alt="EXCEL">
+                        <img src="Images/SAS.png" alt="SAS">
+                        <img src="Images/LIMESURVEY.png" alt="Lime Survey">
+						<img src="Images/POWERPOINT.png" alt="Powerpoint">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <a href="index.html" class="back-home">Retour à l'accueil</a>
+    </footer>
+	
+	<!-- Placez cette balise juste avant la fermeture de </body> -->
+	<script src="JS/script-projet.js"></script>
+</body>
+
+</html>
