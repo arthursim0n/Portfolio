@@ -1508,6 +1508,67 @@ body.dark-mode #passions .passion p {
     color: #d4d4d4;
 }
 
+/* === Navigation === */
+body.dark-mode nav {
+    background-color: #2b3a32;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode nav .nav-links li a {
+    color: #d4d4d4;
+}
+
+body.dark-mode nav .nav-links li a:hover {
+    color: #98c379;
+}
+
+body.dark-mode nav .theme-toggle i {
+    color: #98c379;
+}
+
+/* === En-tête === */
+body.dark-mode header {
+    background-color: #2b3a32;
+    color: #d4d4d4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode header h1 {
+    color: #98c379;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode header .separator {
+    background-color: #98c379;
+}
+
+/* === Section Contact === */
+body.dark-mode .footer-anim {
+    background-color: #2b3a32;
+    color: #d4d4d4;
+}
+
+body.dark-mode .footer-anim h2 {
+    color: #98c379;
+}
+
+body.dark-mode .footer-anim .contact-form input,
+body.dark-mode .footer-anim .contact-form textarea {
+    background-color: #2b3a32;
+    color: #d4d4d4;
+    border: 1px solid #364d3b;
+}
+
+body.dark-mode .footer-anim .contact-form button {
+    background-color: #98c379;
+    color: #2b3a32;
+}
+
+body.dark-mode .footer-anim .contact-info a {
+    color: #98c379;
+}
+
+
 
 
 /* Style de la bascule de thème */
