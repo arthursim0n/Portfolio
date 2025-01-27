@@ -139,41 +139,65 @@ footer {
 }
 
 
-/* Slider styling */
+/* Style pour le slider */
 .slider {
+    position: relative;
+    max-width: 800px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slides {
     display: flex;
-    justify-content: space-between; /* Distribution égale des images */
-    align-items: center; /* Centre les images verticalement */
-    gap: 15px; /* Espacement entre les images */
-    margin-top: 20px;
-    flex-wrap: nowrap; /* Garde tout sur une seule ligne */
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
 }
 
-/* Style des images */
+.slides a {
+    flex: 0 0 100%; /* Chaque slide prend 100% de la largeur */
+}
+
 .slides img {
-    width: calc(33.33% - 10px); /* Chaque image prend un tiers de la largeur avec un petit espacement */
-    height: auto; /* Conserve les proportions de l'image */
-    object-fit: contain; /* Ajuste l'image sans la rogner */
-    border-radius: 8px; /* Coins arrondis */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Effets fluides */
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
 }
 
-/* Hover effect */
-.slides img:hover {
-    transform: scale(1.05); /* Zoom léger au survol */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Accentuation de l'ombre */
+/* Boutons de navigation */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
 }
 
-/* Responsiveness */
+.arrow:hover {
+    opacity: 1;
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}
+
+/* Adaptation aux petits écrans */
 @media (max-width: 768px) {
-    .slides img {
-        width: calc(33.33% - 5px); /* Ajustement pour petits écrans */
-    }
-}
-
-@media (max-width: 480px) {
-    .slides img {
-        width: calc(100% - 10px); /* Une seule image par ligne si très petit écran */
+    .arrow {
+        font-size: 1.5rem;
+        padding: 8px 12px;
     }
 }
