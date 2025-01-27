@@ -1568,6 +1568,33 @@ body.dark-mode .footer-anim .contact-info a {
     color: #98c379;
 }
 
+/* Bande de titre des sections (dark mode avec effet moderne) */
+body.dark-mode .section-title {
+    background-color: #1f2a23; /* Vert foncé */
+    color: #98c379; /* Vert clair élégant */
+    text-shadow: 
+        0 0 5px rgba(152, 195, 121, 0.8), 
+        0 0 10px rgba(102, 153, 102, 0.6); /* Glow subtil */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Ombre douce sous la bande */
+    border-radius: 8px; /* Coins arrondis pour un style moderne */
+    animation: modernGlow 2s infinite alternate; /* Animation subtile */
+}
+
+/* Animation d’effet lumineux (glow moderne) */
+@keyframes modernGlow {
+    0% {
+        text-shadow: 
+            0 0 5px rgba(152, 195, 121, 0.8), 
+            0 0 10px rgba(102, 153, 102, 0.6);
+    }
+    100% {
+        text-shadow: 
+            0 0 8px rgba(152, 195, 121, 1), 
+            0 0 15px rgba(102, 153, 102, 0.8);
+    }
+}
+
+
 
 
 
