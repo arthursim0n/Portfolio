@@ -463,32 +463,6 @@ header .tagline {
     }
 }
 
-/* Section des compétences */
-/* Conteneur global pour Langages et Outils */
-.skills-container {
-    display: flex;
-    justify-content: space-between; /* Sépare les deux sections horizontalement */
-    align-items: flex-start; /* Aligne verticalement en haut */
-    gap: 60px; /* Espacement horizontal entre les deux sections */
-    margin: 40px 0; /* Espacement vertical avec les autres sections */
-    flex-wrap: wrap; /* Permet d'ajuster automatiquement les sections si l'écran est plus petit */
-}
-
-/* Section individuelle */
-.skills-section {
-    width: 45%; /* Réduit la largeur pour équilibrer l'espace entre les sections */
-    text-align: center; /* Centre les titres */
-}
-
-/* Titre des sections (Langages/Outils) */
-.skills-title {
-    font-family: 'Playfair Display', serif; /* Police élégante */
-    font-size: 1.8rem; /* Taille du titre */
-    font-weight: bold;
-    color: #52A77E; /* Vert doux */
-    margin-bottom: 20px; /* Espacement sous le titre */
-    text-align: center;
-}
 
 /* Conteneur des logos */
 .logos-container {
@@ -730,6 +704,8 @@ header .tagline {
     }
 }
 
+/* Section des compétences */
+/* Conteneur global pour Langages et Outils */
 
 .skills-container {
     display: flex;
@@ -743,6 +719,23 @@ header .tagline {
     background-color: #f5fdf9; /* Fond clair */
     border-radius: 15px;
 }
+
+/* Section individuelle */
+.skills-section {
+    width: 45%; /* Réduit la largeur pour équilibrer l'espace entre les sections */
+    text-align: center; /* Centre les titres */
+}
+
+/* Titre des sections (Langages/Outils) */
+.skills-title {
+    font-family: 'Playfair Display', serif; /* Police élégante */
+    font-size: 1.8rem; /* Taille du titre */
+    font-weight: bold;
+    color: #52A77E; /* Vert doux */
+    margin-bottom: 20px; /* Espacement sous le titre */
+    text-align: center;
+}
+
 
 
 /* Style des blocs de compétences */
@@ -790,37 +783,70 @@ header .tagline {
     text-align: justify; /* Aligne le texte pour une apparence propre */
 }
 
-/* Réponse adaptative pour les petits écrans */
-@media (max-width: 1200px) { /* Ordinateur portable */
+/* === Ordinateur portable (écrans moyens) === */
+@media (max-width: 1200px) {
+    .skills-container {
+        display: flex;
+        flex-wrap: wrap; /* Empile les éléments si nécessaire */
+        justify-content: center; /* Centre les éléments */
+        gap: 20px;
+        padding: 10px; /* Réduction du padding global */
+    }
+
     .skill-block {
-        max-width: 45%; /* Affiche deux blocs par ligne */
+        flex: 1 1 calc(50% - 20px); /* Deux blocs par ligne */
+        max-width: calc(50% - 20px); /* Largeur maximale à 50% */
+        margin: 0 auto;
+        padding: 15px;
+        box-sizing: border-box;
     }
 }
 
-@media (max-width: 768px) { /* Tablettes */
+
+
+/* === Tablettes === */
+@media (max-width: 768px) {
     .skills-container {
-        flex-direction: column; /* Les blocs s'empilent sur les petits écrans */
-        gap: 20px; /* Espacement vertical entre les blocs */
+        flex-direction: column; /* Empile les éléments verticalement */
+        justify-content: center;
+        align-items: center; /* Centre chaque bloc */
+        padding: 15px; /* Réduction supplémentaire du padding */
+        gap: 20px; /* Espacement entre les blocs */
     }
+
     .skill-block {
-        max-width: 100%; /* Les blocs prennent toute la largeur */
+        flex: 1 1 100%; /* Chaque bloc occupe toute la largeur */
+        max-width: 100%; /* Largeur maximale */
+        padding: 15px;
+        margin: 0 auto;
+        text-align: center; /* Centre le contenu à l'intérieur des blocs */
     }
 }
 
-@media (max-width: 480px) { /* Téléphones */
+/* === Téléphones === */
+@media (max-width: 480px) {
     .skills-container {
-        padding: 10px; /* Réduit le padding pour les petits écrans */
+        padding: 10px; /* Moins d'espacement sur mobile */
+        gap: 15px;
     }
+
     .skill-block {
-        padding: 15px; /* Réduit l'espace intérieur des blocs */
+        padding: 15px;
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        box-shadow: none; /* Supprime les ombres pour un design plus simple */
     }
+
     .skill-block h3 {
-        font-size: 1.3rem; /* Réduit la taille des titres pour les téléphones */
+        font-size: 1.3rem; /* Taille réduite des titres */
     }
+
     .skill-block p {
-        font-size: 0.9rem; /* Réduit légèrement la taille du texte */
+        font-size: 0.9rem; /* Réduction du texte */
     }
 }
+
 
 
 
