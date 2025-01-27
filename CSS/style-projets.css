@@ -222,4 +222,17 @@ body.dark-mode .project-block h2 {
     }
 }
 
+/* Disposition en colonne sur petits écrans */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column; /* Les colonnes s'empilent */
+        gap: 20px; /* Ajoute de l'espace entre les éléments */
+    }
+
+    .column {
+        max-width: 100%; /* Les colonnes prennent toute la largeur */
+    }
+}
+
+
 
