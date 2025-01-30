@@ -1335,6 +1335,14 @@ section:last-child {
 }
 
 
+.copyright {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #d4d4d4;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
 
 /**********************************************************JavaScript*********************************************************** */
 
