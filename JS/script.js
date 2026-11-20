@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         },
-        { threshold: 0.2 }
+        { threshold: 0 }
     );
 
     sections.forEach((section) => {
