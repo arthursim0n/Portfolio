@@ -322,6 +322,20 @@ header p a:hover {
     padding: 0 10px 10px;
 }
 
+/* Année du projet sous le titre */
+.project-card .project-year {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #6AB08D; /* Vert du site */
+    text-align: center;
+    margin: -5px 0 0;
+    padding: 0 10px 12px;
+}
+ 
+body.dark-mode .project-card .project-year {
+    color: #FFD94A; /* Jaune en mode sombre */
+}
+
 /* Responsive Design - Petits écrans */
 @media (max-width: 768px) {
     .project-card h3 {
