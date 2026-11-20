@@ -33,6 +33,5 @@ document.addEventListener('DOMContentLoaded', () => {
     const isDarkMode = localStorage.getItem("dark-mode") === "true";
     if (isDarkMode) {
         document.body.classList.add("dark-mode");
-        themeIcon.classList.replace('fa-moon', 'fa-sun'); // Met à jour l'icône
     }
 });
