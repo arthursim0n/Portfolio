@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Déterminants de la performance en basketball</title>
+    <link rel="stylesheet" href="CSS/style-projets.css">
+</head>
+ 
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Étude des déterminants<br>de la performance en basketball</h1>
+            <div class="project-dates">
+                <p><strong>Année :</strong> 2025</p>
+                <p><strong>Projet en trinôme</strong></p>
+            </div>
+        </div>
+    </header>
+ 
+    <main class="project-main">
+        <!-- Premier conteneur : Objectifs et Étapes -->
+        <div class="row">
+            <!-- Objectifs -->
+            <div class="column">
+                <div class="project-block">
+                    <h2>Objectifs</h2>
+                    <p>Qu'est-ce qui permet à un joueur de basketball de performer davantage qu'un autre ? À partir d'un jeu de données de joueurs professionnels (17 405 lignes, 35 variables sur plusieurs saisons), ce projet cherche à identifier les leviers statistiques de la performance.</p>
+                    <p><strong>Objectifs principaux :</strong></p>
+                    <ul>
+                        <li>Mesurer l'influence de la morphologie (taille, poids, IMC) sur la performance.</li>
+                        <li>Comparer les profils de joueurs selon leur poste (meneur, arrière, intérieur).</li>
+                        <li>Obtenir une vue d'ensemble des joueurs et des variables qui les différencient.</li>
+                    </ul>
+                </div>
+            </div>
+ 
+            <!-- Étapes du Projet -->
+            <div class="column">
+                <div class="project-block">
+                    <h2>Étapes du Projet</h2>
+                    <ol>
+                        <li><strong>Prise en main des données :</strong> Distinction entre variables de performance et déterminants potentiels, analyse univariée (âge, taille, poids).</li>
+                        <li><strong>Variables biométriques :</strong> Création de l'IMC et régressions linéaires (taille et rebonds défensifs, IMC et temps de jeu).</li>
+                        <li><strong>Différences entre postes :</strong> Normalisation des données, ANOVA et test du Khi-deux.</li>
+                        <li><strong>Analyse factorielle :</strong> Analyse en Composantes Principales (ACP) pour résumer les profils de joueurs.</li>
+                        <li><strong>Synthèse :</strong> Identification des profils types et interprétation à l'aide des définitions officielles de NBA Stats.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+ 
+        <!-- Deuxième conteneur : Résultats et Visuels -->
+        <div class="row">
+            <!-- Résultats -->
+            <div class="column">
+                <div class="project-block">
+                    <h2>Résultats</h2>
+                    <p><strong>Résultats clés :</strong></p>
+                    <ul>
+                        <li>La taille influence positivement les rebonds défensifs : environ 5 rebonds de plus par saison pour chaque centimètre supplémentaire (p &lt; 2.2e-16).</li>
+                        <li>Le poste a un effet significatif sur le nombre de tirs réussis (ANOVA) et est fortement lié à la corpulence (Khi-deux, χ² = 1013,6).</li>
+                        <li>L'ACP résume 69,4 % de l'information en deux dimensions et oppose les intérieurs (physiques, défensifs) aux extérieurs (techniques, créateurs de jeu).</li>
+                        <li>Chaque poste occupe une zone distincte de l'espace factoriel, ce qui valide la classification traditionnelle des postes.</li>
+                    </ul>
+                </div>
+            </div>
+ 
+            <!-- Visuels -->
+            <div class="column">
+                <div class="project-block">
+                    <h2>Visuels du Projet</h2>
+                    <div class="slider">
+                        <div class="slides">
+                            <a href="Images/NBA_1.png" target="_blank">
+                                <img src="Images/NBA_1.png" alt="Pourcentage de tirs réussis par poste">
+                            </a>
+                            <a href="Images/NBA_2.png" target="_blank">
+                                <img src="Images/NBA_2.png" alt="Lien entre la taille et les rebonds défensifs">
+                            </a>
+                            <a href="Images/NBA_3.png" target="_blank">
+                                <img src="Images/NBA_3.png" alt="Relation entre l'IMC et le temps de jeu">
+                            </a>
+                            <a href="Images/NBA_4.png" target="_blank">
+                                <img src="Images/NBA_4.png" alt="Répartition de l'IMC par poste">
+                            </a>
+                            <a href="Images/NBA_5.png" target="_blank">
+                                <img src="Images/NBA_5.png" alt="Contribution des variables à l'ACP">
+                            </a>
+                            <a href="Images/NBA_6.png" target="_blank">
+                                <img src="Images/NBA_6.png" alt="Cercle des corrélations de l'ACP">
+                            </a>
+                            <a href="Images/NBA_7.png" target="_blank">
+                                <img src="Images/NBA_7.png" alt="Projection des joueurs selon leur poste dans l'ACP">
+                            </a>
+                        </div>
+                        <button class="arrow left">&#10094;</button>
+                        <button class="arrow right">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+        <!-- Troisième conteneur : Recueil Méthodologique et Outils -->
+        <div class="row">
+            <!-- Recueil Méthodologique -->
+            <div class="column">
+                <div class="project-block">
+                    <h2>Recueil Méthodologique</h2>
+                    <p><strong>Forces :</strong></p>
+                    <ul>
+                        <li>Démarche progressive, de l'analyse univariée jusqu'à l'analyse multivariée.</li>
+                        <li>Méthodes statistiques variées : régression, ANOVA, Khi-deux et ACP.</li>
+                        <li>Interprétations appuyées sur des sources officielles (NBA Stats).</li>
+                    </ul>
+                    <p><strong>Limites :</strong></p>
+                    <ul>
+                        <li>Prises séparément, les variables biométriques expliquent peu la performance (R² de 0,10 pour la taille).</li>
+                        <li>Dans l'ACP, la taille et le poids dominent fortement les contributions.</li>
+                    </ul>
+                </div>
+            </div>
+ 
+            <!-- Outils & Langages Utilisés -->
+            <div class="column">
+                <div class="project-block">
+                    <h2>Outils & Langages Utilisés</h2>
+                    <div class="tools">
+                        <img src="Images/R.png" alt="R">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+ 
+    <footer>
+        <a href="index.html" class="back-home">Retour à l'accueil</a>
+    </footer>
+    <script src="JS/script-projet.js"></script>
+</body>
+ 
+</html>
