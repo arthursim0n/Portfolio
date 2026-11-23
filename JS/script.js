@@ -1,4 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // === ANNÉE DU COPYRIGHT (mise à jour automatique) ===
+    const annee = document.getElementById('annee');
+    if (annee) annee.textContent = new Date().getFullYear();
+    
     // === DARK MODE ===
     const themeToggle = document.querySelector('.theme-toggle');
     const themeIcon = document.querySelector('#theme-icon');
